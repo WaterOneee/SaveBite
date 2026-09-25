@@ -537,7 +537,7 @@ footer b{color:var(--ink-2)}
   try {
     const client = await import('/@vite/client');
     const hmr = client.createHotContext('hmr-handler/fake.js');
-    hmr.on('vite:afterUpdate', window['__ICUBE_WEBVIEW_HMR_CALLBACK_1790227990446']);
+    hmr.on('vite:afterUpdate', window['__ICUBE_WEBVIEW_HMR_CALLBACK_1790298184201']);
   } catch {}
 })();</script><style>.buttonsCard-bTXa5j {
   padding: var(--spacer-4);
@@ -894,7 +894,7 @@ footer b{color:var(--ink-2)}
   try {
     const client = await import('/@vite/client');
     const hmr = client.createHotContext('hmr-handler/fake.js');
-    hmr.on('vite:afterUpdate', window['__ICUBE_WEBVIEW_HMR_CALLBACK_1790227990455']);
+    hmr.on('vite:afterUpdate', window['__ICUBE_WEBVIEW_HMR_CALLBACK_1790298184212']);
   } catch {}
 })();</script><style>.buttonsCard-bTXa5j {
   padding: var(--spacer-4);
@@ -2977,11 +2977,11 @@ footer b{color:var(--ink-2)}
   user-select: none;
 }
 </style></head>
-<body class="role-super">
+<body>
 <div class="bg-fx"><i class="o1"></i><i class="o2"></i><i class="o3"></i></div>
 
 <!-- ============ Role gate: 第一步选择身份 ============ -->
-<div class="role-gate hidden" id="roleGate">
+<div class="role-gate" id="roleGate">
   <div class="role-card">
     <div class="rc-logo">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 4 6 7 6 11a6 6 0 1 1-12 0c0-4 3-7 6-11z"></path><path d="M12 10v4"></path></svg>
@@ -3064,11 +3064,11 @@ footer b{color:var(--ink-2)}
     </div>
 
     <div class="top-actions">
-      <nav class="nav-links" id="navLinks"><a data-route="manage" onclick="go('manage')">商品管理</a><a data-route="search" onclick="go('search')">商品搜索</a><a data-route="compare" onclick="go('compare')">比价中心</a><a data-route="predict" onclick="go('predict')">消耗预测</a><a data-route="aigc" onclick="go('aigc')">文案生成</a><a data-route="value" onclick="go('value')">项目价值</a><a data-route="log" onclick="go('log')">操作留痕</a></nav>
-      <button class="role-chip" id="roleChip" title="切换身份" onclick="switchRole()"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>小杨超市1</button>
+      <nav class="nav-links" id="navLinks"></nav>
+      <button class="role-chip" id="roleChip" title="切换身份" onclick="switchRole()"></button>
       <button class="icon-btn role-consumer-only" title="购物车" onclick="toggleCart()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"></path><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle><path d="M6 6L5 3H2"></path></svg>
-        <span class="badge" id="cartBadge" style="display: grid;">2</span>
+        <span class="badge" id="cartBadge" style="display: grid;">1</span>
       </button>
       <button class="icon-btn menu-btn" title="菜单" onclick="toggleMobileMenu()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
@@ -3099,10 +3099,10 @@ footer b{color:var(--ink-2)}
             <button class="btn btn-primary role-super-only" onclick="go('manage')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="M5 9l7-6 7 6"></path><path d="M4 21h16"></path></svg>商超商品管理</button>
           </div>
           <div class="hero-stats" id="heroStats">
-    <div class="stat" role="button" tabindex="0" onclick="goStat('search','')" title="查看全部商品"><div class="num">14</div><div class="lbl">商品库 SKU <span class="arrow">↗</span></div></div>
+    <div class="stat" role="button" tabindex="0" onclick="goStat('search','')" title="查看全部商品"><div class="num">17</div><div class="lbl">商品库 SKU <span class="arrow">↗</span></div></div>
     <div class="stat" role="button" tabindex="0" onclick="goStat('search','')" title="按品类浏览商品"><div class="num">6</div><div class="lbl">商品品类 <span class="arrow">↗</span></div></div>
     <div class="stat" role="button" tabindex="0" onclick="goStat('search','near')" title="查看临期待处理商品"><div class="num">5</div><div class="lbl">临期待处理 <span class="arrow">↗</span></div></div>
-    <div class="stat" role="button" tabindex="0" onclick="goStat('search','')" title="查看全部商品"><div class="num">≈45kg</div><div class="lbl">预计可减碳 <span class="arrow">↗</span></div></div></div>
+    <div class="stat" role="button" tabindex="0" onclick="goStat('search','')" title="查看全部商品"><div class="num">≈54kg</div><div class="lbl">预计可减碳 <span class="arrow">↗</span></div></div></div>
         </div>
       </div>
     </div>
@@ -3180,7 +3180,7 @@ footer b{color:var(--ink-2)}
       <p style="color:var(--muted);font-size:14.5px;max-width:880px">临期商品并非次品，而是被时间错过的价值。本系统用 AI 视觉识别自动标注临期状态，用行为画像精准匹配消费者偏好，用销售数据预测消耗速率，帮助商超提前处置库存、消费者低价获得好物、社会整体减少食物浪费，实现「商超减损、用户获益、环境减负」的三方共赢。</p>
       <div class="value-stats" id="homeValueStats" style="margin-top:20px">
     <div class="value-stat"><div class="vn">30%</div><div class="vl">平均减少食物浪费</div></div>
-    <div class="value-stat"><div class="vn">14件</div><div class="vl">在库低碳商品</div></div>
+    <div class="value-stat"><div class="vn">17件</div><div class="vl">在库低碳商品</div></div>
     <div class="value-stat"><div class="vn">3方</div><div class="vl">商超·用户·环境共赢</div></div></div>
     </div>
   </section>
@@ -3397,7 +3397,7 @@ footer b{color:var(--ink-2)}
     <div class="section-head"><h2 style="font-size:20px">项目社会价值</h2></div>
     <div class="value-stats" id="valueStats">
     <div class="value-stat"><div class="vn">30%</div><div class="vl">平均减少食物浪费</div></div>
-    <div class="value-stat"><div class="vn">14件</div><div class="vl">在库低碳商品</div></div>
+    <div class="value-stat"><div class="vn">17件</div><div class="vl">在库低碳商品</div></div>
     <div class="value-stat"><div class="vn">3方</div><div class="vl">商超·用户·环境共赢</div></div></div>
     <div class="card pad" style="margin-top:22px" id="valueNote"></div>
   </section>
@@ -3466,7 +3466,7 @@ footer b{color:var(--ink-2)}
           <b>黑巧克力 85% 100g</b>
           <div style="font-size:11px;color:var(--primary-deep);margin-bottom:2px">小杨超市1</div>
           <div class="ci-price">¥25.20 <span style="color:var(--muted);font-weight:400;font-size:11px">/件</span></div>
-          <div class="ci-sub"><span class="tag tag-fresh">日期充足 · 剩334天</span></div>
+          <div class="ci-sub"><span class="tag tag-fresh">日期充足 · 剩333天</span></div>
           <div class="ci-ops">
             <span class="qty-ctl" style="height:30px">
               <button style="width:28px;height:30px" onclick="changeQty('pi62wk71',-1)">−</button>
@@ -3476,26 +3476,10 @@ footer b{color:var(--ink-2)}
             <span class="ci-del" onclick="removeFromCart('pi62wk71')">删除</span>
           </div>
         </div>
-      </div><div class="cart-item">
-        <span class="ci-thumb" style="background:linear-gradient(135deg,#E8B990,#F0D0B8)">烘</span>
-        <div class="ci-info">
-          <b>草莓奶油蛋糕 6寸</b>
-          <div style="font-size:11px;color:var(--primary-deep);margin-bottom:2px">小杨超市1</div>
-          <div class="ci-price">¥10.60 <span style="color:var(--muted);font-weight:400;font-size:11px">/件</span></div>
-          <div class="ci-sub"><span class="tag tag-critical">临期预警 · 剩1天</span></div>
-          <div class="ci-ops">
-            <span class="qty-ctl" style="height:30px">
-              <button style="width:28px;height:30px" onclick="changeQty('pmf6t387',-1)">−</button>
-              <span class="qty" style="min-width:24px;font-size:13px">1</span>
-              <button style="width:28px;height:30px" onclick="changeQty('pmf6t387',1)">＋</button>
-            </span>
-            <span class="ci-del" onclick="removeFromCart('pmf6t387')">删除</span>
-          </div>
-        </div>
       </div></div>
   <div class="cd-foot">
-    <div class="row"><span>商品件数</span><span id="cartCount">2 件</span></div>
-    <div class="row"><span>优惠总价</span><span class="total">¥<span id="cartTotal">35.80</span></span></div>
+    <div class="row"><span>商品件数</span><span id="cartCount">1 件</span></div>
+    <div class="row"><span>优惠总价</span><span class="total">¥<span id="cartTotal">25.20</span></span></div>
     <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:10px" onclick="checkout()">去结算</button>
   </div>
 </aside>
