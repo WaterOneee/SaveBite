@@ -537,7 +537,7 @@ footer b{color:var(--ink-2)}
   try {
     const client = await import('/@vite/client');
     const hmr = client.createHotContext('hmr-handler/fake.js');
-    hmr.on('vite:afterUpdate', window['__ICUBE_WEBVIEW_HMR_CALLBACK_1790305644372']);
+    hmr.on('vite:afterUpdate', window['__ICUBE_WEBVIEW_HMR_CALLBACK_1790305923653']);
   } catch {}
 })();</script><style>.buttonsCard-bTXa5j {
   padding: var(--spacer-4);
@@ -894,7 +894,7 @@ footer b{color:var(--ink-2)}
   try {
     const client = await import('/@vite/client');
     const hmr = client.createHotContext('hmr-handler/fake.js');
-    hmr.on('vite:afterUpdate', window['__ICUBE_WEBVIEW_HMR_CALLBACK_1790305644380']);
+    hmr.on('vite:afterUpdate', window['__ICUBE_WEBVIEW_HMR_CALLBACK_1790305923664']);
   } catch {}
 })();</script><style>.buttonsCard-bTXa5j {
   padding: var(--spacer-4);
@@ -2977,7 +2977,7 @@ footer b{color:var(--ink-2)}
   user-select: none;
 }
 </style></head>
-<body class="">
+<body>
 <div class="bg-fx"><i class="o1"></i><i class="o2"></i><i class="o3"></i></div>
 
 <!-- ============ Role gate: 第一步选择身份 ============ -->
@@ -3064,7 +3064,7 @@ footer b{color:var(--ink-2)}
     </div>
 
     <div class="top-actions">
-      <nav class="nav-links" id="navLinks"><a data-route="manage" onclick="go('manage')">商品管理</a><a data-route="search" onclick="go('search')">商品搜索</a><a data-route="compare" onclick="go('compare')">比价中心</a><a data-route="predict" onclick="go('predict')">消耗预测</a><a data-route="aigc" onclick="go('aigc')">文案生成</a><a data-route="value" onclick="go('value')">项目价值</a><a data-route="log" onclick="go('log')">操作留痕</a></nav>
+      <nav class="nav-links" id="navLinks"></nav>
       <button class="role-chip" id="roleChip" title="切换身份" onclick="switchRole()"></button>
       <button class="icon-btn role-consumer-only" title="购物车" onclick="toggleCart()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"></path><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle><path d="M6 6L5 3H2"></path></svg>
@@ -5502,27 +5502,7 @@ window.addEventListener('hashchange', render);
 $('globalSearchInput').addEventListener('click', e=>e.stopPropagation());
 $('searchInline') && $('searchInline').addEventListener('keydown', e=>{ if(e.key==='Enter') applySearchFilters(); });
 
-// 会话恢复
-function restoreSession(){
-  let role = null, acct = null;
-  try{ role = localStorage.getItem(ROLE_KEY); }catch(e){}
-  try{ acct = localStorage.getItem(ACCT_KEY); }catch(e){}
-  if(role && acct && state.accounts && state.accounts[acct]){
-    const a = state.accounts[acct];
-    if(a.role === role){
-      currentRole = role;
-      currentAccount = acct;
-      state.cart = a.cart || {};
-      state.behavior = a.behavior || {viewed:{}, carted:{}, viewCount:0, cartCount:0};
-      $('roleGate').classList.add('hidden');
-      $('loginGate').classList.add('hidden');
-      applyRole();
-      go('home');
-    }
-  }
-}
-
-restoreSession();
+// 会话不再自动恢复：每次关闭后重新打开都回到「选择你的身份」页，需手动选择身份登录
 
 /* 一次性数据迁移：将无所属超市的商品归属到「小杨超市1」（在首次云拉取后执行，避免覆盖远端数据） */
 function runMigration(){
